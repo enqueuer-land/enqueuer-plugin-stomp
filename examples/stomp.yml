@@ -1,0 +1,26 @@
+timeout: 3000
+publishers:
+-   name: publisher description
+    type: stomp
+    address: localhost
+    port: 61613
+    user: guest
+    password: guest
+    queue: /queue/stompQueue
+    payload: stompQueue
+subscriptions:
+-   name: subscription description
+    type: stomp
+    address: localhost
+    port: 61613
+    user: guest
+    password: guest
+    queue: /queue/stompQueue
+    onMessageReceived:
+        assertions:
+        -   name: Payload
+            expect: payload
+            toBeEqualTo: `stompQueue`
+        -   name: Headers
+            expect: headers.destination
+            toBeEqualTo: `/queue/stompQueue`

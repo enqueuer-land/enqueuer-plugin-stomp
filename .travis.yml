@@ -1,0 +1,30 @@
+language: node_js
+
+sudo: required
+
+node_js:
+- v10.8.0
+
+cache:
+    directories:
+    - node_modules
+
+notifications:
+    email:
+        recipients:
+        - guilherme.moraes@outlook.com
+        on_success: never
+        on_failure: always
+
+services:
+- rabbitmq
+
+before_install:
+- sudo rabbitmq-plugins enable rabbitmq_stomp
+
+script:
+- npm install
+- npm run lint
+- npm run build
+- npm link
+- nqr -a examples/stomp.yml -l /home/travis/build/lopidio/enqueuer-plugin-stomp
