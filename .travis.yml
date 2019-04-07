@@ -11,8 +11,6 @@ cache:
 
 notifications:
     email:
-        recipients:
-        - guilherme.moraes@outlook.com
         on_success: never
         on_failure: always
 
@@ -27,4 +25,4 @@ script:
 - npm run lint
 - npm run build
 - npm link
-- nqr -a examples/stomp.yml -l /home/travis/build/lopidio/enqueuer-plugin-stomp
+- nqr -a examples/stomp.yml -l `pwd`
