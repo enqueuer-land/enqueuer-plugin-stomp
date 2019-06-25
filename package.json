@@ -28,13 +28,13 @@
   },
   "homepage": "https://github.com/enqueuer-land/enqueuer-plugin-stomp#readme",
   "devDependencies": {
-    "@types/node": "^11.9.4",
-    "ts-node": "^8.0.2",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1"
+    "@types/node": "^11.13.15",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   },
   "dependencies": {
-    "enqueuer-plugins-template": "^1.0.4",
+    "enqueuer": "^5.0.0",
     "stomp-client": "^0.9.0"
   }
 }
