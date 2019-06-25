@@ -1,6 +1,6 @@
 {
   "name": "enqueuer-plugin-stomp",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Enqueuer stomp plugin",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
