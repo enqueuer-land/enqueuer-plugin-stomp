@@ -34,7 +34,7 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "enqueuer": "^5.0.0",
+    "enqueuer": "^6.0.0",
     "stomp-client": "^0.9.0"
   }
 }
